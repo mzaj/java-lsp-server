@@ -12,6 +12,8 @@ ADD https://projectlombok.org/downloads/lombok.jar /eclipse-jdt-ls/
 
 RUN mkdir /var/eclipse-jdt-ls-data
 
+COPY com.microsoft.java.debug.plugin-0.30.0.jar /java-debug/
+
 ENTRYPOINT ["java", \
                    "-Declipse.application=org.eclipse.jdt.ls.core.id1", \
                    "-Dosgi.bundles.defaultStartLevel=4", \
